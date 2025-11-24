@@ -1,0 +1,127 @@
+body {
+            margin: 0;
+            font-family: "Papyrus", "Comic Sans MS", cursive;
+            background: linear-gradient(to bottom right, hotpink, pink, lightpink);
+        }
+
+        header {
+            background: rgba(255, 105, 180, 0.7);
+            padding: 20px;
+            text-align: center;
+            font-size: 2em;
+            font-weight: bold;
+            color: white;
+            backdrop-filter: blur(6px);
+        }
+
+        #container {
+            display: flex;
+        }
+
+        aside {
+            width: 220px;
+            background: rgba(255, 182, 193, 0.4);
+            padding: 20px;
+            height: 100vh;
+            box-sizing: border-box;
+            border-right: 3px solid hotpink;
+            font-size: 1.2em;
+        }
+
+        aside ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        aside li {
+            margin: 10px 0;
+            cursor: pointer;
+            padding: 5px;
+            border-bottom: 2px solid transparent;
+            transition: 0.3s;
+        }
+
+        aside li:hover {
+            border-bottom: 2px solid hotpink;
+            color: hotpink;
+        }
+
+        main {
+            flex: 1;
+            padding: 20px;
+            background: rgba(255, 240, 245, 0.5);
+            font-size: 1.3em;
+        }
+
+        footer {
+            background: rgba(255, 105, 180, 0.6);
+            padding: 15px;
+            text-align: center;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            font-size: 1.1em;
+            backdrop-filter: blur(4px);
+            color: white;
+        }
+
+        footer a {
+            margin: 0 10px;
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+        }
+
+        footer a:hover {
+            color: purple;
+        }
+            /* Fancy heart background pattern */
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('https://png.pngtree.com/png-vector/20220617/ourmid/pngtree-cute-hand-drawn-heart-png-image_5115544.png');
+            background-size: 120px;
+            background-repeat: repeat;
+            opacity: 0.12;
+            pointer-events: none;
+        }
+
+        /* Glowing pet option hover */
+        aside li:hover {
+            border-bottom: 2px solid hotpink;
+            color: hotpink;
+            text-shadow: 0 0 10px hotpink;
+            transform: scale(1.05);
+        }
+
+        /* Main content card effect */
+        main {
+            flex: 1;
+            padding: 20px;
+            background: rgba(255, 240, 245, 0.6);
+            font-size: 1.3em;
+            border-radius: 20px;
+            box-shadow: 0 0 20px rgba(255, 105, 180, 0.4);
+            margin: 20px;
+            animation: fadeIn 0.8s ease;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Floating hearts animation */
+        .floating-heart {
+            position: fixed;
+            bottom: -20px;
+            color: hotpink;
+            font-size: 20px;
+            animation: floatUp 6s linear infinite;
+            opacity: 0.7;
+        }

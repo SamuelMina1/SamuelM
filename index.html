@@ -1,13 +1,55 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>Page Title</title>
-</head> 
-  <link ="styles.css" rel=
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Love Pets</title>
+    <style>
+        @keyframes floatUp {
+            0% { transform: translateY(0) scale(1); opacity: 0.7; }
+            100% { transform: translateY(-120vh) scale(1.5); opacity: 0; }
+        }
+    </style>
+</head>
 <body>
+    <header>
+        LOVE PETS — Customer Service: <span id="serviceText">Click for Help</span>
+    </header>
 
-<h1>My First Heading</h1>
-<p>My first paragraph.</p>
+    <div id="container">
+        <aside>
+            <h2>🐾 Pet Options</h2>
+            <ul>
+                <li onclick="showPet('Rabbits')">Rabbits</li>
+                <li onclick="showPet('Hamsters')">Hamsters</li>
+                <li onclick="showPet('Turtles')">Turtles</li>
+                <li onclick="showPet('Horses')">Horses</li>
+                <li onclick="showPet('Guinea Pigs')">Guinea Pigs</li>
+            </ul>
+        </aside>
 
+        <main id="mainContent">
+            <h2>Welcome to Love Pets!</h2>
+            <p>Select a pet from the sidebar to learn more!</p>
+        </main>
+    </div>
+
+    <footer>
+        <a href="#">Adopt a Dog</a>
+        <a href="#">Adopt a Cat</a>
+        <a href="#">Adopt a Bird</a>
+        <a href="#">Adopt a Fish</a>
+        <a href="#">Adopt a Reptile</a>
+    </footer>
+
+    <script>
+        function showPet(pet) {
+            document.getElementById("mainContent").innerHTML = `<h2>${pet}</h2><p>You selected ${pet}! Here's more information about them.</p>`;
+        }
+
+        document.getElementById("serviceText").addEventListener("click", function() {
+            alert("Customer Service is here to help! How can we assist you today?");
+        });
+    </script>
 </body>
 </html>
