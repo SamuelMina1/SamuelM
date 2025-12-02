@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" type="text/css" href="Styles.css">
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>My Love Pets</title>
+    <link rel="stylesheet" type="text/css" href="Styles.css">
+
     <style>
         @keyframes floatUp {
             0% { transform: translateY(0) scale(1); opacity: 0.7; }
@@ -22,11 +23,11 @@
         <aside>
             <h2>🐾 Pet Options</h2>
             <ul>
-                <li onclick="showPet('Rabbits')">Cats</li>
-                <li onclick="showPet('Hamsters')">Dogs</li>
-                <li onclick="showPet('Turtles')">Birds</li>
-                <li onclick="showPet('Dogs')">Fish</li>
-                <li onclick="showPet('Cats')">Hamster</li>
+                <li onclick="showPet('Cats')">Cats</li>
+                <li onclick="showPet('Dogs')">Dogs</li>
+                <li onclick="showPet('Birds')">Birds</li>
+                <li onclick="showPet('Fish')">Fish</li>
+                <li onclick="showPet('Hamsters')">Hamsters</li>
             </ul>
         </aside>
 
@@ -46,13 +47,23 @@
 
     <script>
         function showPet(pet) {
-            document.getElementById("mainContent").innerHTML =
-                `<h2>${pet}</h2><p>You selected ${pet}! Here's more information about them.</p>`;
+
+            const petImages = {
+                "Cats": "your-image-here.jpg",
+                "Dogs": "your-image-here.jpg",
+                "Birds": "your-image-here.jpg",
+                "Fish": "your-image-here.jpg",
+                "Hamsters": "your-image-here.jpg"
+            };
+
+            document.getElementById("mainContent").innerHTML = `
+                <h2>${pet}</h2>
+                <img src="${petImages[pet]}" alt="${pet}" style="width:300px; border-radius:15px; box-shadow:0 0 15px hotpink;">
+                <p>You selected ${pet}! Here's more information about them.</p>
+            `;
         }
 
         document.getElementById("serviceText").addEventListener("click", function() {
             alert("Customer Service is here to help! How can we assist you today?");
         });
     </script>
-</body>
-</html>
