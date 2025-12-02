@@ -1,11 +1,9 @@
-/* Background and main theme */
 body {
     margin: 0;
     font-family: "Papyrus", "Comic Sans MS", cursive;
     background: linear-gradient(to bottom right, hotpink, pink, lightpink);
 }
 
-/* Header styling */
 header {
     background: rgba(255, 105, 180, 0.7);
     padding: 20px;
@@ -16,12 +14,10 @@ header {
     backdrop-filter: blur(6px);
 }
 
-/* Layout container */
 #container {
     display: flex;
 }
 
-/* Sidebar */
 aside {
     width: 220px;
     background: rgba(255, 182, 193, 0.4);
@@ -39,20 +35,21 @@ aside ul {
 
 aside li {
     margin: 10px 0;
-    cursor: pointer;
     padding: 5px;
-    border-bottom: 2px solid transparent;
     transition: 0.3s;
 }
 
+aside li a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
 aside li:hover {
-    border-bottom: 2px solid hotpink;
     color: hotpink;
-    text-shadow: 0 0 10px hotpink;
     transform: scale(1.05);
 }
 
-/* Main content */
 main {
     flex: 1;
     padding: 20px;
@@ -61,25 +58,8 @@ main {
     border-radius: 20px;
     box-shadow: 0 0 20px rgba(255, 105, 180, 0.4);
     margin: 20px;
-    animation: fadeIn 0.8s ease;
 }
 
-/* Fade animation */
-@keyframes fadeIn {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
-}
-
-/* Image styling */
-.pet-image {
-    width: 300px;
-    border-radius: 15px;
-    box-shadow: 0 0 15px hotpink;
-    display: block;
-    margin-bottom: 15px;
-}
-
-/* Footer */
 footer {
     background: rgba(255, 105, 180, 0.6);
     padding: 15px;
@@ -104,7 +84,7 @@ footer a:hover {
     color: purple;
 }
 
-/* Cute floating heart background */
+/* Heart background */
 body::before {
     content: "";
     position: fixed;
@@ -112,16 +92,9 @@ body::before {
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url("https://png.pngtree.com/png-vector/20220617/ourmid/pngtree-cute-hand-drawn-heart-png-image_5115544.png");
+    background-image: url('https://png.pngtree.com/png-vector/20220617/ourmid/pngtree-cute-hand-drawn-heart-png-image_5115544.png');
     background-size: 120px;
     background-repeat: repeat;
     opacity: 0.12;
     pointer-events: none;
 }
-
-/* Floating hearts animation (if you add any) */
-@keyframes floatUp {
-    0% { transform: translateY(0) scale(1); opacity: 0.7; }
-    100% { transform: translateY(-120vh) scale(1.5); opacity: 0; }
-}
-
