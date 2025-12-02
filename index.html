@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" type="text/css" href="Styles.css"
+    <link rel="stylesheet" type="text/css" href="Styles.css">
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>My Love Pets</title>
@@ -12,6 +12,7 @@
         }
     </style>
 </head>
+
 <body>
     <header>
         LOVE PETS — Customer Service: <span id="serviceText">Click for Help</span>
@@ -24,14 +25,14 @@
                 <li onclick="showPet('Rabbits')">Rabbits</li>
                 <li onclick="showPet('Hamsters')">Hamsters</li>
                 <li onclick="showPet('Turtles')">Turtles</li>
-                <li onclick="showPet('Horses')">Horses</li>
-                <li onclick="showPet('Guinea Pigs')">Guinea Pigs</li>
+                <li onclick="showPet('Dogs')">Horses</li>
+                <li onclick="showPet('Cats')">Guinea Pigs</li>
             </ul>
         </aside>
 
         <main id="mainContent">
             <h2>Welcome to Love Pets!</h2>
-            <p>Select a pet from the sidebar to learn more!</p>
+            <p>Hello and welcome to my adoption agency where u can adopt your favorite pets</p>
         </main>
     </div>
 
@@ -45,9 +46,10 @@
 
     <script>
         function showPet(pet) {
-            document.getElementById("mainContent").innerHTML = `<h2>${pet}</h2><p>You selected ${pet}! Here's more information about them.</p>`;
+            document.getElementById("mainContent").innerHTML =
+                `<h2>${pet}</h2><p>You selected ${pet}! Here's more information about them.</p>`;
         }
-<a href="url">LeBron=.webp</a>
+
         document.getElementById("serviceText").addEventListener("click", function() {
             alert("Customer Service is here to help! How can we assist you today?");
         });
