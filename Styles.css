@@ -125,3 +125,68 @@ body {
             animation: floatUp 6s linear infinite;
             opacity: 0.7;
         }
+</body>
+</html>
+
+
+<style>
+body {
+    margin: 0;
+    font-family: "Papyrus", "Comic Sans MS", cursive;
+    background: linear-gradient(to bottom right, hotpink, pink, lightpink);
+}
+
+header {
+    background: rgba(255, 105, 180, 0.7);
+    padding: 20px;
+    text-align: center;
+    font-size: 2em;
+    font-weight: bold;
+    color: white;
+    backdrop-filter: blur(6px);
+}
+
+#container {
+    display: flex;
+}
+
+aside {
+    width: 220px;
+    background: rgba(255, 182, 193, 0.4);
+    padding: 20px;
+    height: 100vh;
+    box-sizing: border-box;
+    border-right: 3px solid hotpink;
+    font-size: 1.2em;
+}
+
+aside ul {
+    list-style: none;
+    padding: 0;
+}
+
+aside li {
+    margin: 10px 0;
+    cursor: pointer;
+    padding: 5px;
+    border-bottom: 2px solid transparent;
+    transition: 0.3s;
+}
+
+aside li:hover {
+    border-bottom: 2px solid hotpink;
+    color: hotpink;
+    text-shadow: 0 0 10px hotpink;
+    transform: scale(1.05);
+}
+
+main {
+    flex: 1;
+    padding: 20px;
+    background: rgba(255, 240, 245, 0.6);
+    font-size: 1.3em;
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgba(255, 105, 180, 0.4);
+    margin: 20px;
+    animation: fadeIn 0.
+
